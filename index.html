@@ -6,6 +6,41 @@
 	<title>Document</title>
 </head>
 <body>
+	<script>
+		var numb1=prompt('Введите число от 0 до 999: '),
+		numbLen=numb1.length;
+		obj = ();
+
+		a(numb1);
+
+		function a(numb) {
+			if(numb<0 || numb >999) {
+				console.log('Число ' + numb + ' не в диапозоне 0 -999');
+			} else {
+				switch (numbLen) {
+					case 3: 
+					obj.units = numb[2];
+					obj.tens = numb[1];
+					obj.hundreds = numb[0];
+					break;
+
+					case 2: 
+					obj.units = numb[1];
+					obj.tens = numb[0];
+					break;
+					default:
+					obj.units=numb;
+				}
+				console.log(obj);
+			}
+			return obj;
+		}
+
+
+
+
+
+	</script>
 	
 </body>
 </html>
